@@ -11,6 +11,19 @@ namespace ASC1
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World of C#!!");
+            string line;
+            line = Console.ReadLine();
+            int numarPantof;
+            try
+            {
+                numarPantof = Convert.ToInt32(line);
+                Console.WriteLine($"Aveti {numarPantof} numarul la pantof.");
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
         }
     }
 }
